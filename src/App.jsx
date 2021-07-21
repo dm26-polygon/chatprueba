@@ -68,7 +68,7 @@ const App = () => {
   return (
     <div>
 
-      <h2 className="text-center text-title mt-5" >CHAT</h2>
+      <h2 className="text-center text-title mt-5" >CHAT HEROKU</h2>
       <br />
       <br />
 
