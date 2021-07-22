@@ -6,6 +6,7 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import './app.css'
 
 import socket from './helpers/Socket'
+import axios from 'axios'
 
 const App = () => {
 
@@ -17,8 +18,12 @@ const App = () => {
 
   useEffect(() => {
 
-    console.log("Effect")
+    console.log("Conexion a la API")
 
+    axios.get('https://servernodeio.herokuapp.com/home').then(res => {
+      console.log(res.data)
+    })
+   
     const chatBox = document.querySelector('#chat');
 
     socket.on('actions', function (msg) {
