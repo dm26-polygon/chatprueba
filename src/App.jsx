@@ -27,7 +27,7 @@ const App = () => {
 
     const chatBox = document.querySelector('#chat');
 
-    socket.on('actions', function (msg) {
+    socket.on('sendMessages', function (msg) {
       setMessages([...messages, msg])
       console.log(msg)
     });
@@ -60,7 +60,7 @@ const App = () => {
       livesName: "Lives test 1"
     };
 
-    socket.emit("actions", message);
+    socket.emit("sendMessages", message);
 
     messageForm.value = "";
     messageForm.focus()
@@ -74,7 +74,7 @@ const App = () => {
   return (
     <div>
 
-      <h2 className="text-center text-title mt-5" >CHAT HEROKU</h2>
+      <h2 className="text-center text-title mt-5" >CHAT AWS JK</h2>
       <br />
       <br />
 
