@@ -20,7 +20,7 @@ const App = () => {
 
     console.log("Conectando a la API AWS JK ..")
    
-    axios.get('http://chattesting-env-2.eba-hfevfekr.us-east-1.elasticbeanstalk.com/saludo').then(res => {
+    axios.get('https://deploy2chat.herokuapp.com/saludo').then(res => {
       console.log(res.data)
     })
 
@@ -73,7 +73,7 @@ const App = () => {
   return (
     <div>
 
-      <h2 className="text-center text-title mt-5" >CHAT AWS JK</h2>
+      <h2 className="text-center text-title mt-5" >CHAT AWS JK 2</h2>
       <br />
       <br />
 
