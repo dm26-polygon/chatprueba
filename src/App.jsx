@@ -18,10 +18,9 @@ const App = () => {
 
   useEffect(() => {
 
-    console.log("Conexion a la API Heroku")
-
+    console.log("Conectando a la API AWS JK ..")
    
-    axios.get('https://servernodeio.herokuapp.com/home').then(res => {
+    axios.get('http://chattesting-env-2.eba-hfevfekr.us-east-1.elasticbeanstalk.com/saludo').then(res => {
       console.log(res.data)
     })
 
