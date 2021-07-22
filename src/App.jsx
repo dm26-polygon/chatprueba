@@ -18,15 +18,16 @@ const App = () => {
 
   useEffect(() => {
 
-    console.log("Conexion a la API JuanK")
+    console.log("Conexion a la API Heroku")
 
-    axios.get('http://chattesting-env-2.eba-hfevfekr.us-east-1.elasticbeanstalk.com/saludo').then(res => {
+   
+    axios.get('https://servernodeio.herokuapp.com/home').then(res => {
       console.log(res.data)
     })
-   
+
     const chatBox = document.querySelector('#chat');
 
-    socket.on('sendMessages', function (msg) {
+    socket.on('actions', function (msg) {
       setMessages([...messages, msg])
       console.log(msg)
     });
@@ -59,7 +60,7 @@ const App = () => {
       livesName: "Lives test 1"
     };
 
-    socket.emit("sendMessages", message);
+    socket.emit("actions", message);
 
     messageForm.value = "";
     messageForm.focus()
@@ -73,7 +74,7 @@ const App = () => {
   return (
     <div>
 
-      <h2 className="text-center text-title mt-5" >CHAT WS</h2>
+      <h2 className="text-center text-title mt-5" >CHAT HEROKU</h2>
       <br />
       <br />
 
