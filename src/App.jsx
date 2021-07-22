@@ -73,7 +73,7 @@ const App = () => {
   return (
     <div>
 
-      <h2 className="text-center text-title mt-5" >CHAT AWS</h2>
+      <h2 className="text-center text-title mt-5" >CHAT WS</h2>
       <br />
       <br />
 
